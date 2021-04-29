@@ -37,12 +37,16 @@
     </header>
 
     <main class="conteudo" id="conteudo">
-        <section class="conteudo-inicio"></section>
+        <section class="conteudo-inicio">
+            <p>Seja bem-vindo ao BrainKids - Um Mundo de Imaginação. Divirta-se!</p>
+        </section>
 
-        <section class="conteudo-sobre" id="sobre"></section>
+        <section class="conteudo-sobre" id="sobre">
+            <h2>Sobre</h2>
+        </section>
 
         <section class="conteudo-jogos" id="jogos">
-
+            <h2>Jogos</h2>
         </section>
 
         <section></section>
@@ -54,8 +58,19 @@
         <section></section>
 
         <section class="conteudo-contato" id="contato">
+            <h2>Possui alguma dúvida? Entre em contato conosco</h2>
             <form action="" method="get" class="contato-form">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
+                <p class="form-alert-danger" id="form-alert-danger">O nome é obrigatório.</p>
 
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                <p class="form-alert-danger">O e-mail é obrigatório.</p>
+
+                <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+                <p class="form-alert-danger">O campo de mensagem é obrigatório.</p>
+                <input type="submit" value="Enviar">
             </form>
         </section>
     </main>
