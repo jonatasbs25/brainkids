@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="estilo.css">
     <link rel="shortcut icon" href="img/mutano.jpg" type="image/x-icon">
 </head>
-<body>
+<body id="topo">
     <header class="menu" id="menu">
-        
+        <div class="menu-logo">
+            <img src="img/mutano.jpg" alt="Logotipo" class="logo">
+            <p>BrainKids - Um Mundo de Imaginação</p>
+        </div>
         <nav class="menu-nav" id="menu-nav">
             <ul class="menu-content">
                 <li class="menu-item">
@@ -22,11 +25,21 @@
                 <li class="menu-item dropdown">
                     <a href="#jogos">Jogos</a>
                     <ul class="dropdown-content">
-                        <li class="dropdown-item">Gartic</li>
-                        <li class="dropdown-item">SimCity!</li>
-                        <li class="dropdown-item">Minecraft</li>
-                        <li class="dropdown-item">Tetris</li>
-                        <li class="dropdown-item">Super Mário Flash</li>
+                        <li class="dropdown-item">
+                            <a href="#gartic">Gartic</a> 
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#simcity">SimCity!</a>   
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#minecraft">Minecraft</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#tetris">Tetris</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#mario">Super Mário Flash</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="menu-item">
@@ -59,7 +72,7 @@
 
         <section class="conteudo-contato" id="contato">
             <h2>Possui alguma dúvida? Entre em contato conosco</h2>
-            <form action="" method="get" class="contato-form">
+            <form action="index.html" method="get" class="contato-form">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
                 <p class="form-alert-danger" id="form-alert-danger">O nome é obrigatório.</p>
@@ -74,6 +87,10 @@
             </form>
         </section>
     </main>
+
+    <span class="botao-topo">
+        <a href="#topo">^</a>
+    </span>
 
     <footer class="footer">
         BrainKids - Um Mundo de Imaginação &copy; Todos os direitos reservados.
