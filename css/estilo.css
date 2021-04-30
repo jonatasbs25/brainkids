@@ -70,7 +70,7 @@ form.contato-form{
     line-height: 25px;
 }
 
-form.contato-form p{
+form.contato-form p.form-alert-danger{
     font-size: 1.2em;
     color: #d11e0a;
     text-shadow: black 0.3px 0.3px 1px;
