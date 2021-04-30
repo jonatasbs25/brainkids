@@ -50,13 +50,34 @@ section.conteudo-inicio p::after{
     opacity: 1;
     display: inline-block;
     margin-left: 5px;
-    animation: blink .8s infinite;
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+    opacity: 1;
+    }
+    50% {
+    opacity: 0;
+    }
 }
 /* -- Conteúdo - Sobre -- */
 
 /* -- Conteúdo - Jogos -- */
 
 /* -- Conteúdo - Contato -- */
+form.contato-form{
+    line-height: 25px;
+}
+
+form.contato-form p{
+    font-size: 1.2em;
+    color: #d11e0a;
+    text-shadow: black 0.3px 0.3px 1px;
+    position: relative;
+    top: -15px;
+    visibility: hidden;
+}
 
 /* -- Botão de voltar ao topo -- */
 span.botao-topo{
