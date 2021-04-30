@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* -- Menu -- */
+header.menu{
+    background-color: white;
+}
+
+div.menu-logo{
+    color: #884fff;
+    font-size: 2.4em;
+}
+
+nav.menu-nav{
+    background-color: #c6f7ff;
+    font-size: 1.6em;
+}
+
+/*ul.menu-content{
+    display: inline;
+}
+
+.menu-item a{
+    text-decoration: none;
+}
+
+li.menu-item-dropdown{}
+/* -- Conteúdo -- */
+
+/* -- Conteúdo - Início -- */
+section.conteudo-inicio p{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+section.conteudo-inicio p::after{
+    content: "|";
+    opacity: 1;
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink .8s infinite;
+}
+/* -- Conteúdo - Sobre -- */
+
+/* -- Conteúdo - Jogos -- */
+
+/* -- Conteúdo - Contato -- */
+
+/* -- Botão de voltar ao topo -- */
+span.botao-topo{
+    bottom: 20px;
+    right: 25px;
+    background-color: red;
+    border-radius: 50%;
+    width: 1.4rem;
+    position: fixed;
+}
+
+span.botao-topo a{
+    color: white;
+}
+
+/* -- Rodapé -- */
+footer{
+    text-align: center;
+}
