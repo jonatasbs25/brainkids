@@ -1,6 +1,7 @@
 /* Declarando variáveis globais de estilo */
 html{
     /* Cores */
+    --branco: #f7f7f7;
     --roxo-escuro: #673dc0;
     --roxo: #884fff;
     --roxo-claro: #ba9aff;
@@ -9,14 +10,12 @@ html{
     --cinza: #7c7c7c;
     --azul-claro: #c6f7ff;
     --vermelho: #d11e0a;
+    --vermelho-claro: rgba(209, 94, 81, 0.582);
     --verde: #099B4B;
     /* Fonte */
     font-family: 'Nunito', Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
 }
-
-img{width: 50%;
-height: 80vh;}
 
 *{
     box-sizing: border-box;
@@ -34,6 +33,10 @@ li{
 
 h1.titulo{
     font-size: 2.5rem;
+}
+
+section.jogos, section.sobre{
+    border-bottom: 2px solid var(--roxo);
 }
 
 h1.titulo::before{
@@ -112,6 +115,12 @@ button:hover, a.link-jogo:hover{
     
 }
 
+.menu-dropdown::after{
+    content: "\25BC";
+    width: 3px;
+    height: 13px;
+}
+
 .menu-nav .lista-jogos{
     display: none;
     position: relative;
@@ -124,7 +133,7 @@ button:hover, a.link-jogo:hover{
 /* Conteúdo */
 .conteudo{
     margin: 0 auto;
-    max-width: 860px;
+    max-width: 930px;
     padding: 60px 10px;
 }
 
@@ -141,7 +150,6 @@ button:hover, a.link-jogo:hover{
     font-size: 1.8rem;
     text-shadow: 1px 1px 2px black;
     text-align: center;
-    margin-bottom: 5vh;
 }
 
 .inicio .msg-inicio::after{
@@ -163,9 +171,26 @@ button:hover, a.link-jogo:hover{
 /* Conteúdo - Seção Sobre*/
 
 /* Conteúdo - Seção Jogos */
+/* section.jogos > section:nth-child(2n + 1){
+    display: flex;
+} */
+
 .jogo{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.jogo:nth-child(1){
+    grid-row: 1 / 2;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px var(--cinza);
 }
 
 .conteudo-jogo{
@@ -184,56 +209,94 @@ a.link-jogo{
 }
 
 /* Conteúdo - Seção Contato */
+.contato{
+    width: 100%;
+    padding: 40px calc((100% - 960px)/2);
+    background-color: var(--branco);
+}
+
 .form-contato{
     max-width: 500px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .form-contato input, .form-contato textarea{
-    border: 2px solid;
-    border-radius: 5px;
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
+    font-weight: 500;
     font-size: 1.2rem;
-    padding: 3px 8px;
+    border: 2px solid var(--roxo-escuro);
+    border-radius: 5px;
+    padding: 5px 8px;
 }
 
 .form-contato .input{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    flex: 1;
+    
 }
 
 label{
+    color: var(--roxo-escuro);
     font-size: 1.35rem;
     font-weight: 700;
     margin: 7px 0;
 }
 
 input{
-    height: 2.25rem;
+    height: 2.3rem;
+}
+
+input:focus, .form-contato textarea:focus{
+    outline: 0;
 }
 
 input:valid, .form-contato textarea:valid{
-    border-color: var(--verde);
+    border: 2px solid var(--verde);
+}
+
+textarea{
+    resize: none;
+    height: 200px;
 }
 
 .form-contato .btn-form{
     background-color: var(--roxo-escuro);
     color: var(--btn-roxo-claro);
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
-    margin: 0 auto;
-    padding: 0 20px;
+    font-weight: bold;
+    padding: 0 30px;
     height: 2.5rem;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    margin: 20px auto auto auto;
 }
 
+/* .input .erro{
+    margin-top: 5px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--vermelho);
+    background-color: var(--vermelho-claro);
+    color: var(--vermelho);
+    font-size: 1.25rem;
+} */
+
 /* Caixa de Diálogo */
-.modal-confirmar{
+.form-contato > .modal-confirmar{
     background-color: var(--azul-claro);
+    border: 2px solid black;
     text-align: center;
-    border-radius: 10px;
-    height: 25vh;
+    border-radius: 20px;
+    max-height: 25vh;
+    position: absolute;
+    margin: 30vh 60px;
 }
 
 .modal-confirmar > .titulo-modal{
@@ -272,4 +335,32 @@ input:valid, .form-contato textarea:valid{
     .rodape{
         font-size: 1rem;
     }
+}
+
+/* Botão de Voltar ao Topo */
+.btn-topo{
+    display: block;
+    background-color: var(--roxo);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid var(--roxo);
+    position: fixed;
+    cursor: pointer;
+    right: 5vh;
+    bottom: 5vh;
+}
+
+.btn-topo span{
+    transform: rotate(45deg);
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-topo.active{
+    display: block;
+    right: 5vh;
+    bottom: 5vh;
 }

@@ -9,6 +9,7 @@ function dateTime(){
 
 setInterval(dateTime, 1000);
 
+/* Pegar a data do sistema */
 function getDate(){
     const now = new Date();
     const diaSemana = now.getDay();
@@ -23,6 +24,7 @@ function getDate(){
     return data;
 }
 
+/* Pegar a hora do sistema */
 function getTime(){
     const now = new Date();
     const hora = formatarZeros(now.getHours());
@@ -34,6 +36,25 @@ function getTime(){
     return horas;
 }
 
+/* Formatando a horário de 1 para 01  */
 const formatarZeros = (n) => {
     return ("0" + n).slice(-2);
+}
+
+/* Botão de Voltar ao Topo */
+const btnTopo = document.querySelector(".btn-topo");
+btnTopo.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+function exibirBotao(){
+    if(window.scrollY === 500){
+        btnTopo.classList.toggle("active");
+    }
+    else{
+        btnTopo.classList.toggle("active");
+    }
 }

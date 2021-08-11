@@ -32,8 +32,8 @@
                     <li>
                         <a href="#">Início</a>
                     </li>
-                    <li class="menu-dropdown">
-                        <a href="#jogos">Jogos</a>
+                    <li>
+                        <a href="#jogos" class="menu-dropdown">Jogos</a>
                         <ul class="lista-jogos">
                             <li>
                                 <a href="#gartic">Gartic</a>    
@@ -77,7 +77,7 @@
                 <div class="jogo">
                     <figure class="img-jogo">
                         <img src="src/img/gartic.png" alt="Imagem do Gartic">
-                        <figcaption></figcaption>
+                        <!-- <figcaption></figcaption> -->
                     </figure>
                     <div class="conteudo-jogo">
                         <p class="info-jogo">
@@ -96,7 +96,7 @@
                 <h2 class="subtitulo">SimCity!</h2>
                 <div class="jogo">
                     <figure class="img-jogo">
-                        <img src="src/img/" alt="Imagem do SimCity!">
+                        <img src="src/img/simcity.jpg" alt="Imagem do SimCity!">
                         <figcaption></figcaption>
                     </figure>
                     <div class="conteudo-jogo">
@@ -120,7 +120,7 @@
                 <h2 class="subtitulo">Minecraft</h2>
                 <div class="jogo">
                     <figure class="img-jogo">
-                        <img src="src/img/" alt="Imagem do Minecraft">
+                        <img src="src/img/minecraft.png" alt="Imagem do Minecraft">
                         <figcaption></figcaption>
                     </figure>
                     <div class="conteudo-jogo">
@@ -138,7 +138,7 @@
                 <h2 class="subtitulo">Tetris</h2>
                 <div class="jogo">
                     <figure class="img-jogo">
-                        <img src="src/img/" alt="Imagem do Tetris">
+                        <img src="src/img/tetris.png" alt="Imagem do Tetris">
                         <figcaption></figcaption>
                     </figure>
                     <div class="conteudo-jogo">
@@ -156,7 +156,7 @@
                 <h2 class="subtitulo">Super Mário Bros.</h2>
                 <div class="jogo">
                     <figure class="img-jogo">
-                        <img src="src/img/" alt="Imagem do Super Mário Bros.">
+                        <img src="src/img/mario.jpg" alt="Imagem do Super Mário Bros.">
                         <figcaption></figcaption>
                     </figure>
                     <div class="conteudo-jogo">
@@ -175,43 +175,44 @@
             <h1 class="titulo">Quem Somos?</h1>
             <p class="info-sobre">O BrainKids - Um Mundo de Imaginação é um portal educativo que realiza recomendações de jogos que auxiliam crianças e jovens a desenvolverem o raciocínio lógico e, claro, garantir a diversão de todos. Caso possuir alguma dúvida sobre como contribuir ou algo relacionado ao projeto, entre em contato conosco através do nosso <a href="#contato">formulário</a> de contato ou pelo e-mail brainkids@gmail.com.</p>
         </section>
-
-        <section class="contato" id="contato">
-            <h1 class="titulo">Contato</h1>
-            <form action="#" method="get" class="form-contato">
-                <div class="input">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" name="nome" id="nome" required>
-                    <span class="erro"></span>
-                </div>
-
-                <div class="input">
-                    <label for="email">E-mail</label>
-                    <input type="text" name="email" id="email" placeholder="exemplo@gmail.com" required>
-                    <span class="erro"></span>
-                </div>
-
-                <div class="input">
-                    <label for="mensagem">Mensagem/Dúvida</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
-                    <span class="erro"></span>
-                </div>
-
-                <button type="submit" class="btn-form">Confirmar</button>
-
-                <div class="modal-confirmar">
-                    <h3 class="titulo-modal">Desejar confirmar o envio?</h3>
-                    <button type="submit" class="btn-denied">
-                        <span>X</span>
-                    </button>
-                    <button type="submit" class="btn-confirm">
-                        <span>✓</span>
-                    </button>
-                </div>
-            </form>
-        </section>
     </main>
-    <button class="btn-topo" title="Botão de Voltar ao Topo"></button>
+    <section class="contato" id="contato">
+        <h1 class="titulo">Contato</h1>
+        <form action="#" method="get" class="form-contato">
+            <div class="input">
+                <label for="nome">Nome Completo</label>
+                <input type="text" name="nome" id="nome" placeholder="Ex: Lionel Messi" required>
+                <span class="erro"></span>
+            </div>
+
+            <div class="input">
+                <label for="email">E-mail</label>
+                <input type="text" name="email" id="email" placeholder="exemplo@domínio.com" required>
+                <span class="erro"></span>
+            </div>
+
+            <div class="input">
+                <label for="mensagem">Mensagem/Dúvida</label>
+                <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Ex: Esse projeto atualizará a lista de jogos?" required></textarea>
+                <span class="erro"></span>
+            </div>
+
+            <button type="submit" class="btn-form">Confirmar</button>
+
+            <!-- <div class="modal-confirmar">
+                <h3 class="titulo-modal">Desejar confirmar o envio?</h3>
+                <button type="submit" class="btn-denied">
+                    <span>X</span>
+                </button>
+                <button type="submit" class="btn-confirm">
+                    <span>✓</span>
+                </button>
+            </div> -->
+        </form>
+    </section>
+    <button class="btn-topo" title="Botão de Voltar ao Topo">
+        <span>&#10140;</span>
+    </button>
     <footer class="rodape">
         <p>BrainKids - Um Mundo de Imaginação &copy; Todos os direitos reservados.</p>
     </footer>
