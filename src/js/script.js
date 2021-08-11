@@ -1,30 +1,39 @@
-function MaquinaEscrever(elemento){
-    const textoArray = elemento.innerHTML.split('');
-    elemento.innerHTML = '';
-    textoArray.forEach((letra, i) => {
-        setTimeout(() => elemento.innerHTML += letra, 75 * i);
-    });
+/* Exibir dia e hora do sistema */
+function dateTime(){
+    const data = document.querySelector(".data");
+    const horas = document.querySelector(".horas");
+
+    data.innerHTML = getDate();
+    horas.innerHTML = getTime();
 }
 
-const frase = document.getElementById('frase-maquina');
-MaquinaEscrever(frase);
+setInterval(dateTime, 1000);
 
-function ExibirAlert(){
-    const alerta = document.getElementById('form-alert-danger');
-    const inputNome = document.querySelector('input[text]');
-    const inputEmail = document.querySelector('input[email]');
-    const inputMessage = document.querySelector('textarea');
-    if(inputNome == null){
-        alerta.style.visibility = "visible";
-        alerta.style.transition = "4s";
-    }
-    else if(inputEmail == ""){
-        alerta.style.visibility = "visible";
-    }
-    else if(inputMessage == null){
-        alerta.style.visibility = "visible";
-    }
-    else{
-        window.alert('Formulário enviado com sucesso');
-    }
+function getDate(){
+    const now = new Date();
+    const diaSemana = now.getDay();
+    const semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+    const dia = now.getDate();
+    const mes = now.getMonth();
+    const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    const ano = now.getFullYear();
+
+    const data = `<p>${semana[diaSemana]}, ${dia} de ${meses[mes]} de ${ano}</p>`;
+
+    return data;
+}
+
+function getTime(){
+    const now = new Date();
+    const hora = formatarZeros(now.getHours());
+    const minutos = formatarZeros(now.getMinutes());
+    const segundos = formatarZeros(now.getSeconds());
+
+    const horas = `<p>${hora}:${minutos}:${segundos}</p>`;
+
+    return horas;
+}
+
+const formatarZeros = (n) => {
+    return ("0" + n).slice(-2);
 }

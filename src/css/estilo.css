@@ -1,6 +1,275 @@
 /* Declarando variáveis globais de estilo */
-:root{
+html{
+    /* Cores */
+    --roxo-escuro: #673dc0;
     --roxo: #884fff;
+    --roxo-claro: #ba9aff;
+    --btn-roxo-claro: #e8ddff;
+    --preto: #222222;
+    --cinza: #7c7c7c;
     --azul-claro: #c6f7ff;
     --vermelho: #d11e0a;
+    --verde: #099B4B;
+    /* Fonte */
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+img{width: 50%;
+height: 80vh;}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+h1.titulo{
+    font-size: 2.5rem;
+}
+
+h1.titulo::before{
+    content: "|";
+    margin-right: 10px;
+    height: 20px;
+    width: 5px;
+}
+
+
+
+section h1:nth-child(1){color: var(--roxo-escuro);}
+
+h2.subtitulo{
+    font-size: 2rem;
+}
+
+button:hover, a.link-jogo:hover{
+    filter: brightness(1.2);
+    transition: .4s;
+}
+
+/* Info */
+.info-bk{
+    background-color: var(--roxo-escuro);
+    color: white;
+    
+}
+
+.info{
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Menu */
+.menu-bk{
+    background-color: var(--roxo);
+    display: block;
+}
+
+.menu{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-logo a, .menu-nav a{
+    color: white;
+}
+
+.menu-logo{
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.menu-nav{
+    display: block;
+}
+
+.menu-nav ul{
+    display: flex;
+}
+
+.menu-nav a{
+    display: block;
+    padding: 10px;
+    font-size: 1.4rem;
+    
+}
+
+.menu-nav .lista-jogos{
+    display: none;
+    position: relative;
+}
+
+.menu-nav .lista-jogos a{
+    font-size: 1.2rem;
+}
+
+/* Conteúdo */
+.conteudo{
+    margin: 0 auto;
+    max-width: 860px;
+    padding: 60px 10px;
+}
+
+.conteudo p{
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: var(--cinza);
+    margin-bottom: 1rem;
+}
+
+/* Conteúdo - Seção Início */
+.inicio .msg-inicio{
+    color: var(--roxo-escuro);
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.inicio .msg-inicio::after{
+    content: "|";
+    margin-left: 5px;
+    opacity: 1;
+    animation: blink .8s infinite;
+}
+
+@keyframes blink {
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+/* Conteúdo - Seção Sobre*/
+
+/* Conteúdo - Seção Jogos */
+.jogo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.conteudo-jogo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a.link-jogo{
+    background-color: var(--roxo-escuro);
+    color: var(--btn-roxo-claro);
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* Conteúdo - Seção Contato */
+.form-contato{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-contato input, .form-contato textarea{
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 3px 8px;
+}
+
+.form-contato .input{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+label{
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 7px 0;
+}
+
+input{
+    height: 2.25rem;
+}
+
+input:valid, .form-contato textarea:valid{
+    border-color: var(--verde);
+}
+
+.form-contato .btn-form{
+    background-color: var(--roxo-escuro);
+    color: var(--btn-roxo-claro);
+    font-size: 1.4rem;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Caixa de Diálogo */
+.modal-confirmar{
+    background-color: var(--azul-claro);
+    text-align: center;
+    border-radius: 10px;
+    height: 25vh;
+}
+
+.modal-confirmar > .titulo-modal{
+    font-size: 1.6rem;
+}
+
+.modal-confirmar button{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-denied{
+    background-color: var(--vermelho);
+}
+
+.btn-confirm{
+    background-color: var(--verde);
+}
+
+/* Rodapé */
+.rodape{
+    background-color: var(--roxo-claro);
+    color: var(--roxo-escuro);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 768px){
+    .rodape{
+        font-size: 1rem;
+    }
 }

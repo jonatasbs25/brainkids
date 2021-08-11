@@ -6,14 +6,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="src/img/cerebro-mutano.ico" type="image/x-icon">
     <title>BrainKids - Um Mundo de Imaginação</title>
+    <!-- Estilos -->
     <link rel="stylesheet" href="src/css/estilo.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="menu"></header>
-    <main class="conteudo"></main>
+    <div class="info-bk">
+        <div class="info">
+            <p>+55 (11) 4022-8922</p>
+            <p class="data"></p>
+            <p class="horas"></p>
+        </div>
+    </div>
+
+    <header class="menu-bk">
+        <div class="menu">
+            <div class="menu-logo">
+                <a href="#" class="logo">BrainKids</a>
+            </div>
+            <nav class="menu-nav">
+                <ul>
+                    <li>
+                        <a href="#">Início</a>
+                    </li>
+                    <li class="menu-dropdown">
+                        <a href="#jogos">Jogos</a>
+                        <ul class="lista-jogos">
+                            <li>
+                                <a href="#gartic">Gartic</a>    
+                            </li>
+                            <li>
+                                <a href="#minecraft">Minecraft</a>
+                            </li>
+                            <li>
+                                <a href="#simcity">SimCity!</a>
+                            </li>
+                            <li>
+                                <a href="#tetris">Tetris</a>
+                            </li>
+                            <li>
+                                <a href="#mario">Super Mário Bros.</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#sobre">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+                <span class="btn-menu"></span>
+                <span class="btn-close"></span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <section class="inicio">
+            <h3 class="msg-inicio">Seja bem-vindo(a) ao BrainKids - Um Mundo de Imaginação</h3>
+        </section>
+
+        <section class="jogos" id="jogos">
+            <h1 class="titulo">Jogos</h1>
+            <section class="gartic" id="#gartic">
+                <h2 class="subtitulo">Gartic</h2>
+                <div class="jogo">
+                    <figure class="img-jogo">
+                        <img src="src/img/gartic.png" alt="Imagem do Gartic">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="conteudo-jogo">
+                        <p class="info-jogo">
+                            Inspirado no jogo Imagem e Ação, esse divertido jogo de adivinhação de desenho - ideal para vários jogadores - 
+                            faz com que os usuários se revezem para desenhar palavras sugeridas, enquanto o restante precisa adivinhar corretamente para ganhar pontos.<br>
+                            Disponível no portal web e também para aparelhos Android e IOS.
+                        </p>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="link-jogo">
+                            <span>Visitar o Portal Oficial</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="simcity" id="simcity">
+                <h2 class="subtitulo">SimCity!</h2>
+                <div class="jogo">
+                    <figure class="img-jogo">
+                        <img src="src/img/" alt="Imagem do SimCity!">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="conteudo-jogo">
+                        <p class="info-jogo">
+                            Seja o herói da sua própria cidade projetando e criando uma metrópole linda e cheia de vida em SimCity BuildIt, 
+                            o construtor de cidades mais popular para dispositivos móveis, e outros jogos da série SimCity.
+                        </p>
+                        <p class="info-jogo"></p>
+                            É você quem toma todas as decisões conforme sua cidade fica maior e mais intricada. 
+                            Faça escolhas inteligentes para manter seus cidadãos felizes e seu horizonte sempre crescendo. 
+                            Construa seu caminho até o extraordinário.
+                        </p>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="link-jogo">
+                            <span>Visitar o Portal Oficial</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="minecraft" id="minecraft">
+                <h2 class="subtitulo">Minecraft</h2>
+                <div class="jogo">
+                    <figure class="img-jogo">
+                        <img src="src/img/" alt="Imagem do Minecraft">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="conteudo-jogo">
+                        <p class="info-jogo">
+                            É um jogo que se trata de posicionar blocos e embarcar em aventuras. Tem como cenário mundos gerados de forma infinita e com espaços totalmente abertos - montanhas geladas, rios pantanosos, vastas pastagens e muito mais - repletos de segredos, maravilhas e perigos!
+                        </p>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="link-jogo">
+                            <span>Visitar o Portal Oficial</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tetris" id="tetris">
+                <h2 class="subtitulo">Tetris</h2>
+                <div class="jogo">
+                    <figure class="img-jogo">
+                        <img src="src/img/" alt="Imagem do Tetris">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="conteudo-jogo">
+                        <p class="info-jogo">
+                            O jogo de quebra-cabeça original Tetris requer decisões rápidas, planejamento on-the-fly, e pensamento criativo. Certamente você conhece bem a experiência de jogar Tetris. Depois de uma longa temporada jogando Tetris, você poderia reorganizar o seu mobiliário, ou sua despensa e fazer tudo se encaixar perfeitamente.
+                        </p>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="link-jogo">
+                            <span>Visitar o Portal Oficial</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mario" id="mario">
+                <h2 class="subtitulo">Super Mário Bros.</h2>
+                <div class="jogo">
+                    <figure class="img-jogo">
+                        <img src="src/img/" alt="Imagem do Super Mário Bros.">
+                        <figcaption></figcaption>
+                    </figure>
+                    <div class="conteudo-jogo">
+                        <p class="info-jogo">
+                            Nada como jogar o famoso Super Mario Bros, agora em Flash. Complete diversos níveis deste maravilhoso e famoso jogo. O jogador controla o principal protagonista da série, Mario. O objetivo do jogo é percorrer o Reino do Cogumelo (Mushroom Kingdom), sobreviver às forças do principal vilão, Bowser, e salvar a Princesa Peach (na época conhecida por seu nome americano, Princess Toadstool) e seu reino do domínio dos Koopa Troopas.
+                        </p>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="link-jogo">
+                            <span>Visitar o Portal Oficial</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <h1 class="titulo">Quem Somos?</h1>
+            <p class="info-sobre">O BrainKids - Um Mundo de Imaginação é um portal educativo que realiza recomendações de jogos que auxiliam crianças e jovens a desenvolverem o raciocínio lógico e, claro, garantir a diversão de todos. Caso possuir alguma dúvida sobre como contribuir ou algo relacionado ao projeto, entre em contato conosco através do nosso <a href="#contato">formulário</a> de contato ou pelo e-mail brainkids@gmail.com.</p>
+        </section>
+
+        <section class="contato" id="contato">
+            <h1 class="titulo">Contato</h1>
+            <form action="#" method="get" class="form-contato">
+                <div class="input">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" name="nome" id="nome" required>
+                    <span class="erro"></span>
+                </div>
+
+                <div class="input">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email" id="email" placeholder="exemplo@gmail.com" required>
+                    <span class="erro"></span>
+                </div>
+
+                <div class="input">
+                    <label for="mensagem">Mensagem/Dúvida</label>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
+                    <span class="erro"></span>
+                </div>
+
+                <button type="submit" class="btn-form">Confirmar</button>
+
+                <div class="modal-confirmar">
+                    <h3 class="titulo-modal">Desejar confirmar o envio?</h3>
+                    <button type="submit" class="btn-denied">
+                        <span>X</span>
+                    </button>
+                    <button type="submit" class="btn-confirm">
+                        <span>✓</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <button class="btn-topo" title="Botão de Voltar ao Topo"></button>
     <footer class="rodape">
         <p>BrainKids - Um Mundo de Imaginação &copy; Todos os direitos reservados.</p>
     </footer>
 </body>
-<script src="src/js/script.js"></script>
+<script src="src/js/script.js" defer></script>
 </html>
